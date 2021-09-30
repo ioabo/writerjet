@@ -5,8 +5,8 @@ import { createApp } from 'vue';
 import { createWebHistory, createRouter } from 'vue-router';
 import { routes } from './routes';
 import CKEditor from '@ckeditor/ckeditor5-vue';
-import 'bootstrap/dist/css/bootstrap.css'
-import 'bootstrap-vue/dist/bootstrap-vue.css'
+// import 'bootstrap/dist/css/bootstrap.css'
+// import 'bootstrap-vue/dist/bootstrap-vue.css'
 
 // import { LayoutPlugin } from 'bootstrap-vue'
 // // This imports <b-modal> as well as the v-b-modal directive as a plugin:
