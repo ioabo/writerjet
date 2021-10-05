@@ -29,7 +29,7 @@
                     </div>
                 </div>
                 <div class="card-body">
-                    <table class="table">
+                    <table id="dataTables" class="table">
                     <thead>
                       <tr>
                         <th scope="col">Code</th>

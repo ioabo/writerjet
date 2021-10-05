@@ -1,5 +1,5 @@
 import DocumentsIndex from './components/documents/Index'
-import DocumentsCreate from './components/documents/Example_multiselect'
+import DocumentsCreate from './components/documents/Create'
 import DocumentsEdit from './components/documents/Edit'
 
 export const routes = [

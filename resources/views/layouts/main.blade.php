@@ -9,10 +9,22 @@
     <meta name="description" content="" />
     <meta name="author" content="" />
     <title>Dashboard</title>
-    <link href="{{ asset('css/style.css') }}"" rel=" stylesheet" />
+    <link href="{{ asset('css/style.css') }}" rel=" stylesheet" />
+    {{-- <link href="{{ asset('css/sb-admin.css') }}" rel=" stylesheet" /> --}}
+    <link href="{{ asset('css/jQuery.dataTables.min.css') }}" rel=" stylesheet" />
+    {{-- <link href="{{ asset('css/font.css') }}s" rel="stylesheet" type="text/css"> --}}
+    {{-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" /> --}}
+    {{-- <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/fontawesome.min.css"
+        integrity="sha512-Rcr1oG0XvqZI1yv1HIg9LgZVDEhf2AHjv+9AuD1JXWGLzlkoKDVvE925qySLcEywpMAYA/rkg296MkvqBF07Yw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" /> --}}
+
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
     <script src="{{ asset('js/all.min.js') }}" crossorigin="anonymous"></script>
+    {{-- <script src="{{ asset('js/jQuery.dataTables.js') }}" crossorigin="anonymou"></script> --}}
 
 </head>
 
@@ -33,6 +45,7 @@
         </form>
         <!-- Navbar-->
         <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+            {{-- <ul class="d-none form-inline ms-auto me-0 me-md-3 my-2 my-md-0"> --}}
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown"
                     aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
@@ -204,8 +217,8 @@
     </div>
     <script src="{{ asset('js/bootstrap.bundle.min.js') }}" crossorigin="anonymous"></script>
     <script src="{{ asset('js/scripts.js') }}"></script>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
-        <script src="js/datatables-simple-demo.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
+    <script src="js/dataTable_simple.js"></script>
 </body>
 
 </html>
