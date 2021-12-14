@@ -1,20 +1,23 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api;
 
-use App\Models\Document;
+use App\Http\Controllers\Controller;
+use App\Models\User;
 use Illuminate\Http\Request;
 
-class DocumentController extends Controller
+class UserController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        return view('documents.index');
+        $users = User::all();
+
+        return response()->json($users);
     }
 
     /**
@@ -41,10 +44,10 @@ class DocumentController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Document  $document
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Document $document)
+    public function show($id)
     {
         //
     }
@@ -52,10 +55,10 @@ class DocumentController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Document  $document
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Document $document)
+    public function edit($id)
     {
         //
     }
@@ -64,10 +67,10 @@ class DocumentController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Document  $document
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Document $document)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -75,11 +78,45 @@ class DocumentController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Document  $document
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Document $document)
+    public function destroy($id)
     {
         //
+    }
+
+    public function activateUser($id)
+    {
+        $user = User::find($id);
+
+        $status = "Registered";
+
+        if ($user) {
+            $user->registration_status = $status;
+            $user->save();
+        }
+    }
+    public function promoteUser($id)
+    {
+        $user = User::find($id);
+
+        $type = "Administrator";
+
+        if ($user) {
+            $user->type = $type;
+            $user->save();
+        }
+    }
+    public function demoteUser($id)
+    {
+        $user = User::find($id);
+
+        $type = "User";
+
+        if ($user) {
+            $user->type = $type;
+            $user->save();
+        }
     }
 }

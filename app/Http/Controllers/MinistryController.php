@@ -42,6 +42,10 @@ class MinistryController extends Controller
             'code' => $request->code,
             'description' => $request->description,
             'address' => $request->address,
+            'p_o_box'=> $request->p_o_box,
+            'phone' => $request->phone,
+            'email' => $request->email,
+            'website' => $request->website,
             'SRO' => $request->SRO,
         ]);
 
@@ -84,6 +88,10 @@ class MinistryController extends Controller
             'code' => $request->code,
             'description' => $request->description,
             'address' => $request->address,
+            'p_o_box'=> $request->p_o_box,
+            'phone' => $request->phone,
+            'email' => $request->email,
+            'website' => $request->website,
             'SRO' => $request->SRO,
         ]);
 

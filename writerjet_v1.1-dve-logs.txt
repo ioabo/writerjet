@@ -1,0 +1,105 @@
+The followings are the logs to the changes made to WriterJet to make up 
+the version 1.1 -> WriterJet 1.1
+Author: Jacob Krisiano {Senior ICT Officer, Public Servie Office, Government of Kiribati, 2021}
+
++----------------------------------+
+| Phase 1 -[due date: 14/12/2021]: |
++----------------------------------+
+
+11:31 am
+Tuesday, 14 December 2021 (GMT+12)
+Time in Tarawa
+-------------------------------------
+    Update Model => Ministry:
+        -> has one or more divisions;
+    Create Model => Division:
+        -> belongs to one Ministry;
+        -> has one or more Units;
+    Create Model => Unit:
+        -> belongs to one Division;
+
+12:10 pm
+Tuesday, 14 December 2021 (GMT+12)
+Time in Tarawa
+-------------------------------------
+    Create View => Division:
+        -> prepare Controller and Routes accordingly;
+            {view, create, edit, store, update}
+
+4:27 pm
+Tuesday, 14 December 2021 (GMT+12)
+Time in Tarawa
+-------------------------------------
+    Store and Update Division:
+        ->Create DivisionStoreRequest;
+    Create View => Unit:
+        -> prepare Controller and Routes accordingly;
+            {view, create, edit, store, update}
+
+9:23 pm
+Tuesday, 14 December 2021 (GMT+12)
+Time in Bairiki
+-------------------------------------
+          Phase 1 Summary
+-------------------------------------
+Phase 1 completed with the following files affected:
+    Models:
+        -> Ministry.php
+        -> Division.php
+    Controllers:
+        -> DivisionController.php
+    Views:
+        -> ministries.index.blade.php
+        -> divisions.index.blade.php
+        -> divisions.create.blade.php
+        -> divisions.edit.blade.php
+    Routes:
+        ->web.php
+    Migrations:
+        -> 2021_12_13_233541_create_divisions_table.php
+        -> 2021_12_13_233604_create_units_table.php
+        
+***********************************************************
+
++----------------------------------+
+| Phase 2 -[due date: 15/12/2021]: |
++----------------------------------+
+
++----------------------------------+
+| Phase 3 -[due date: 15/12/2021]: |
++----------------------------------+
+
++----------------------------------+
+| Phase 4 -[due date: 16/12/2021]: |
++----------------------------------+
+
++----------------------------------+
+| Phase 5 -[due date: 17/12/2021]: |
++----------------------------------+
+
+***********************************************************
+
++--------------------------------------+
+| Decorative upgrades for this version |
++--------------------------------------+
+7:07 am
+Wednesday, 15 December 2021 (GMT+12)
+Time in Gilbert Islands
+-------------------------------------
+Table themed:
+    Background -> Secondary;
+    Head -> Dark;
+    Pages Affected:
+        View:
+        -> ministries.index.blade.php;
+        -> divisions.index.blade.php;
+        -> units.index.blade.php;
+        -> categories.index.blade.php;
+        js/components:
+        -> Dashboard.vue;
+        -> documents/Index.vue;
+        -> documents/Drafts.vue;
+        -> documents/ForSecretary.vue;
+        -> documents/Archives.vue;
+        -> templates/Index.vue;
+        -> users/Index.vue;

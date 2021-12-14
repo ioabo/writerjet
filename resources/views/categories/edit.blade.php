@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container-fluid">
-        <h3 class="mt-4">Edit Category</h3>
+        <h4 class="mt-4">Edit Category</h4>
         <div class="breadcrumb mt-4">
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb m-2">

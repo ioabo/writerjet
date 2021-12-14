@@ -27,7 +27,12 @@ class MinistryStoreRequest extends FormRequest
             'code' => ['required'],
             'description' => ['required'],
             'address' => ['required'],
-            'SRO' => ['required']
+            'SRO' => ['required'],
+            'p_o_box' => ['required'],
+            'phone' => ['required'],
+            'email' => ['required'],
+            'website' => ['required'],
+            'p_o_box' => ['required'],
         ];
     }
 }

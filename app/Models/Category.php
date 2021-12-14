@@ -13,11 +13,7 @@ class Category extends Model
     protected $fillable = ['name'];
 
 
-    public function subject(){
-
-        return $this->hasMany(Subject::class);
-
-    }
+    
 
     public function count_rows($id){
         

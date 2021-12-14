@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container-fluid">
-        <h3 class="mt-4">Templates</h3>
+        <h4 class="mt-4">Templates</h4>
         <div class="mt-4">
             @if (session('status'))
                 <div class="alert alert-success" role="alert">
@@ -40,7 +40,7 @@
                 </div>
             </div>
             <div class="card-body">
-                <table class="table" id="datatablesSimple">
+                <table class="table table-hover table-bordered" id="datatablesSimple">
                     <thead>
                         <tr>
                             <th scope="col">ID</th>
@@ -54,7 +54,7 @@
                                 <td>{{ $subject->id }}</td>
                                 <td>{{ $subject->name }}</td>
                                 <td><a href="{{ route('subjects.edit', [$category->id, $subject->id]) }}"
-                                        class="btn btn-success"> Edit </a></td>
+                                        class="btn btn-success btn-sm"> Edit </a></td>
                             </tr>
                         @endforeach
                     </tbody>

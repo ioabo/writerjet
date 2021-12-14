@@ -18,6 +18,10 @@ class CreateMinistriesTable extends Migration
             $table->string('code');
             $table->string('description');
             $table->string('address');
+            $table->string('p_o_box');
+            $table->string('phone');
+            $table->string('email');
+            $table->string('website');
             $table->string('SRO');
             $table->timestamps();
         });

@@ -1,22 +1,14 @@
 require('./bootstrap');
 
-window.Vue = require('vue').default;
 import { createApp } from 'vue';
 import { createWebHistory, createRouter } from 'vue-router';
 import { routes } from './routes';
 import CKEditor from '@ckeditor/ckeditor5-vue';
-// import 'bootstrap/dist/css/bootstrap.css'
-// import 'bootstrap-vue/dist/bootstrap-vue.css'
+import VuejsSimpleDatatable from "vuejs-simple-datatable";
+import axios from 'axios'
+import VueAxios from 'vue-axios'
 
-// import { LayoutPlugin } from 'bootstrap-vue'
-// // This imports <b-modal> as well as the v-b-modal directive as a plugin:
-// import { ModalPlugin } from 'bootstrap-vue'
-// // This imports <b-card> along with all the <b-card-*> sub-components as a plugin:
-// import { CardPlugin } from 'bootstrap-vue'
-// // This imports directive v-b-scrollspy as a plugin:
-// import { VBScrollspyPlugin } from 'bootstrap-vue'
-// // This imports the dropdown and table plugins
-// import { DropdownPlugin, TablePlugin } from 'bootstrap-vue'
+var VueResource = require('vue-resource');
 
 const router = createRouter({
     history: createWebHistory(),
@@ -24,9 +16,17 @@ const router = createRouter({
 })
 
 const app = createApp({})
-app.component('documents-index', require('./components/documents/Index.vue').default)
+app.component('documents-index', require('./components/Dashboard.vue').default)
+app.component('dashboard-index', require('./components/Dashboard.vue'))
 app.use(CKEditor)
 app.use(router)
+app.use(VuejsSimpleDatatable)
+app.use(VueAxios, axios)
+app.use(VueResource)
+app.config.productionTip = false
+app.config.globalProperties.$userId = document.querySelector("meta[name='user_id']").getAttribute('content'); //to pass currrent logged in User id from Blades
+// app.use(BootstrapVue)- //wait for boostratp-vue support Vue3
+// app.use(IconsPlugin)
 // app.use(LayoutPlugin)
 // app.use(ModalPlugin)
 // app.use(CardPlugin)
@@ -36,6 +36,11 @@ app.use(router)
 
 app.mount('#app')
 
+// const home = createApp({})
+// home.component('dashboard-index', require('./components/Dashboard.vue'))
+// home.use(router)
+
+// home.mount('#dashboard')
 
 
 

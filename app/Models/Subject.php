@@ -15,10 +15,6 @@ class Subject extends Model
         'content'
     ];
 
-    public function category(){
-        
-        return $this->belongsTo(Category::class);
-
-    }
+    
     
 }
